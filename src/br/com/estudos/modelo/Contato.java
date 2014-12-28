@@ -1,6 +1,5 @@
 package br.com.estudos.modelo;
 
-import java.util.Calendar;
 
 public class Contato {
 
@@ -8,7 +7,7 @@ public class Contato {
 	private String nome;
 	private String email;
 	private String endereco;
-	private Calendar dtNascimento;
+	private String dtNascimento;
 
 	public Integer getId() {
 		return id;
@@ -42,11 +41,11 @@ public class Contato {
 		this.endereco = endereco;
 	}
 
-	public Calendar getDtNascimento() {
+	public String getDtNascimento() {
 		return dtNascimento;
 	}
 
-	public void setDtNascimento(Calendar dtNascimento) {
+	public void setDtNascimento(String dtNascimento) {
 		this.dtNascimento = dtNascimento;
 	}
 

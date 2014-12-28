@@ -17,17 +17,18 @@ public class ContatoDAO {
 	public void inserir(Contato contato) {
 
 		try {
+			
 			this.connection = con.getConnection();
 
-			String query = "INSERT INTO contato (nome,email,endereco) VALUES(?,?,?)";
+			String query = "INSERT INTO contato (nome,email,endereco,dtNascimento) VALUES(?,?,?,?)";
 
 			PreparedStatement stmt;
-
 			stmt = connection.prepareStatement(query);
 
 			stmt.setString(1, contato.getNome());
 			stmt.setString(2, contato.getEmail());
 			stmt.setString(3, contato.getEndereco());
+			stmt.setString(4,contato.getDtNascimento());
 
 			stmt.execute();
 			stmt.close();
